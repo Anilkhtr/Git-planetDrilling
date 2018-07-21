@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PlanetDrilling</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" type="text/css" href="public/css/planetdrilling.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<style>
+  *{
+  box-sizing: border-box;
+}
+
+body{
+  /*background:#92bde7;
+  color:#485e74;*/
+  line-height:1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding:1em;
+}
+
+.container{
+  max-width:1170px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:1em;
+}
+
+.contactinfo{
+  list-style: none;
+  padding:0;
+}
+
+.brand{
+  text-align: center;
+  color: black;
+}
+
+.brand span{
+  color:#fff;
+}
+
+.wrapper{
+  box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+}
+
+.wrapper > *{
+  padding: 1em;
+}
+
+.company-info{
+  background:#ff9f6fed;
+}
+
+.company-info h3, .company-info ul{
+  text-align: center;
+  margin:0 0 1rem 0;
+}
+
+.contact{
+  background:#c1bfb9de;;
+}
+
+/* FORM STYLES */
+.contact form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:20px;
+}
+
+.contact form label{
+  display:block;
+}
+
+.contact form p{
+  margin:0;
+}
+
+.contact form .full{
+  grid-column: 1 / 3;
+}
+
+.contact form button, .contact form input, .contact form textarea{
+  width:100%;
+  padding:1em;
+  border:1px solid #c9e6ff;
+}
+
+.contact form button{
+    background: #20637773;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: cursive;
+}
+
+.contact form button:hover,.contact form button:focus{
+  background:#92bde7;
+  color:#fff;
+  outline:0;
+  transition: background-color 2s ease-out;
+}
+
+/* LARGE SCREENS */
+@media(min-width:700px){
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper > *{
+    padding:2em;
+  }
+
+  .company-info h3, .company-info ul, .brand{
+    text-align: left;
+  }
+}
+</style>
+  <body>
+    <div class="grid-container">
+      <div class="item1">
+          <img class="logoimg" src="\public\assets\13.jpg">
+            <h1 style="margin-left: 150px; font-size: 40px;margin-top: 43px;    color: #2aff32d1;">Planet Drilling Company Pvt. Ltd.</h1>
+            <h4 style="margin-left: 150px; font-size: 25px;margin-top: 43px;    color: #2aff32d1;">The Water Well Drilling Company</h4> 
+        </div>
+    </div>
+    </div>
+    </div>
+<nav class="navbar navbar-inverse">
+   <div class="container-fluid" style="font-size: 15px;font-family: sans-serif;
+  font-feature-settings: 1px;font: icon;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/about">Company Overview</a></li>
+              <li><a href="/service">Well Services</a></li>
+              <li><a href="/photogallery">Photo Gallery</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+    </div>
+  </div>
+</nav>
+  <div class="container">
+    <h1 class="brand"><span>Planet</span> Drilling Company</h1>
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info">
+        <h3>Planet Drilling Company</h3>
+        <ul class="contactinfo">
+          <li><i class="fa fa-road"></i> New Baneshwor, Kathmandu Nepal</li>
+          <li><i class="fa fa-phone"></i>+977 9851071880</li>
+          <li><i class="fa fa-envelope"></i> premkarki@planetdrilling.com</li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3>Email Us</h3>
+        <h2> {{msg}} </h2>
+        <form method="POST" action="send">
+          <p>
+            <label>Name</label>
+            <input type="text" name="name">
+          </p>
+          <p>
+            <label>Company</label>
+            <input type="text" name="company">
+          </p>
+          <p>
+            <label>Email Address</label>
+            <input type="email" name="email">
+          </p>
+          <p>
+            <label>Phone Number</label>
+            <input type="text" name="phone">
+          </p>
+          <p class="full">
+            <label>Message</label>
+            <textarea name="message" rows="5"></textarea>
+          </p>
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron text-center" style="margin-bottom:0; background-color: #c5f3d39c;">
+  <h3> Drilling Company</h3>
+  <a href="https://www.facebook.com/ilovedrill/" class="footer" target="_blank"><i class="fa fa-facebook-official"></i></a>
+  <a href="#" class="footer" target="_blank"><i class="fa fa-twitter"></i></a>
+  <a href="https://np.linkedin.com/in/prem-karki-97715442" class="footer" target="_blank"><i class="fa fa-linkedin"></i></a>
+</div>
+</body>
+</html>
+
+
